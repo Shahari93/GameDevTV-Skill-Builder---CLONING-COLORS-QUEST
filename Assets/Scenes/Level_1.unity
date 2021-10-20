@@ -2617,6 +2617,10 @@ PrefabInstance:
       value: PlayerBlock (2)
       objectReference: {fileID: 0}
     - target: {fileID: 2039809777333422715, guid: 7c9baa423b17db549af1430f2e53672e, type: 3}
+      propertyPath: colors
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2039809777333422715, guid: 7c9baa423b17db549af1430f2e53672e, type: 3}
       propertyPath: isBlue
       value: 1
       objectReference: {fileID: 0}
@@ -5372,6 +5376,10 @@ PrefabInstance:
     - target: {fileID: 1626900650069454262, guid: 9f25cd7f48d23004cbac9e7d9f56805b, type: 3}
       propertyPath: m_Name
       value: Gem
+      objectReference: {fileID: 0}
+    - target: {fileID: 1626900650069454262, guid: 9f25cd7f48d23004cbac9e7d9f56805b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5474496776418543824, guid: 9f25cd7f48d23004cbac9e7d9f56805b, type: 3}
       propertyPath: colors
