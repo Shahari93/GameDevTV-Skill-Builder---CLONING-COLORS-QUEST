@@ -11,10 +11,10 @@ GameObject:
   - component: {fileID: 646319724904498132}
   - component: {fileID: 646319724904498133}
   - component: {fileID: 646319724904498130}
-  - component: {fileID: 646319724904498138}
   - component: {fileID: 646319724904498139}
+  - component: {fileID: 646319724904498138}
   - component: {fileID: 2039809777333422715}
-  m_Layer: 9
+  m_Layer: 7
   m_Name: PlayerBlock
   m_TagString: Block
   m_Icon: {fileID: 0}
@@ -47,6 +47,7 @@ SpriteRenderer:
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -113,23 +114,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.9, y: 0.9}
   m_EdgeRadius: 0
---- !u!114 &646319724904498138
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 646319724904498134}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 27548a2ea1e026a448420da37b5a8ef9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 5
-  jumpSpeed: 5
-  isActiveBool: 0
-  downArrow: {fileID: 646319725704998052}
-  myRigidBody: {fileID: 646319724904498139}
 --- !u!50 &646319724904498139
 Rigidbody2D:
   serializedVersion: 4
@@ -151,6 +135,23 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &646319724904498138
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 646319724904498134}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27548a2ea1e026a448420da37b5a8ef9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 5
+  jumpSpeed: 5
+  isActiveBool: 0
+  downArrow: {fileID: 646319725704998052}
+  myRigidBody: {fileID: 646319724904498139}
 --- !u!114 &2039809777333422715
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -163,10 +164,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e055227fdd4bb94f90f4aa67ceaeff7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myColor: {r: 0, g: 0, b: 0, a: 0}
-  isRed: 0
-  isYellow: 0
-  isBlue: 0
 --- !u!1 &646319725704998052
 GameObject:
   m_ObjectHideFlags: 0
@@ -177,7 +174,7 @@ GameObject:
   m_Component:
   - component: {fileID: 646319725704998051}
   - component: {fileID: 646319725704998050}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: DownArrow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -209,6 +206,7 @@ SpriteRenderer:
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
