@@ -14,7 +14,7 @@ public class Hazard : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Block"))
+        if (collision.gameObject.CompareTag("Block")&& collision.gameObject.GetComponent<SpriteRenderer>().color != this.GetComponent<SpriteRenderer>().color)
         {
             if (collision.gameObject.GetComponent<BlockMovement>().isActiveBool)
             {

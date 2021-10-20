@@ -11,9 +11,9 @@ public class SpawnNewBlock : MonoBehaviour
 
     public void SpawnBlock()
     {
+        GameObject block = Instantiate(blockPrefab, spawnPosition.position, Quaternion.identity);
         randColor = Random.Range(0, 3);
         // assigning random int that represent the enum index
-        blockPrefab.GetComponent<ColorChanger>().colors = (ColorSelect)randColor;
-        Instantiate(blockPrefab, spawnPosition.position, Quaternion.identity);
+        block.GetComponent<ColorChanger>().colors = (ColorSelect)randColor;
     }
 }

@@ -25,7 +25,7 @@ public class ColorChanger : MonoBehaviour
         AssignColor();
     }
 
-    private void AssignColor()
+    public void AssignColor()
     {
         switch (colors)
         {
