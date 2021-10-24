@@ -1,10 +1,12 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class FlashCoin : MonoBehaviour
 {
     private SpriteRenderer mySpriteRenderer;
     private bool isColliding = false;
+    [SerializeField] private Image coinImage;
 
     private void Start()
     {
@@ -21,9 +23,16 @@ public class FlashCoin : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if(collision.gameObject.CompareTag("Block") && collision.gameObject.GetComponent<SpriteRenderer>().color != mySpriteRenderer.color)
+        if (collision.gameObject.CompareTag("Block") && collision.gameObject.GetComponent<SpriteRenderer>().color != mySpriteRenderer.color)
         {
             isColliding = true;
+        }
+        else if (collision.gameObject.CompareTag("Block"))
+        {
+            Destroy(this.gameObject);
+            Color color = coinImage.color;
+            color.a = 1;
+            coinImage.color = color;
         }
     }
 
