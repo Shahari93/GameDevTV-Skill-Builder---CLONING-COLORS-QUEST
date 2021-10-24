@@ -8,6 +8,8 @@ public class FlashCoin : MonoBehaviour
     private bool isColliding = false;
     [SerializeField] private Image coinImage;
 
+    public bool hasCoin = false;
+
     private void Start()
     {
         mySpriteRenderer = GetComponent<SpriteRenderer>();
@@ -33,6 +35,7 @@ public class FlashCoin : MonoBehaviour
             Color color = coinImage.color;
             color.a = 1;
             coinImage.color = color;
+            hasCoin = true;
         }
     }
 

@@ -7,8 +7,14 @@ public class GameHandler : MonoBehaviour
 {
     [SerializeField] private BlockMovement[] allPlayerBlocks;
 
+    private void Awake()
+    {
+        Time.timeScale = 1;
+    }
+
     void Start()
     {
+        
         AllPlayerBlocksArrayUpdate();
     }
 
